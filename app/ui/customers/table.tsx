@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import { lusitana } from '@/app/ui/fonts';
 import Search from '@/app/ui/search';
-import { CustomersTable, FormattedCustomersTable } from '@/app/lib/definitions';
+// import { CustomersTable, FormattedCustomersTable } from '@/app/lib/definitions';
+import { FormattedCustomersTable } from '@/app/lib/definitions';
 
 export default async function CustomersTable({
   customers,
@@ -10,9 +10,7 @@ export default async function CustomersTable({
 }) {
   return (
     <div className="w-full">
-      <h1 className={`${lusitana.className} mb-8 text-xl md:text-2xl`}>
-        Customers
-      </h1>
+      <h1 className={` mb-8 text-xl md:text-2xl`}>Customers</h1>
       <Search placeholder="Search customers..." />
       <div className="mt-6 flow-root">
         <div className="overflow-x-auto">
@@ -31,7 +29,7 @@ export default async function CustomersTable({
                             <Image
                               src={customer.image_url}
                               className="rounded-full"
-                              alt={`${customer.name}'s profile picture`}
+                              alt={`It's profile picture`}
                               width={28}
                               height={28}
                             />
@@ -88,7 +86,7 @@ export default async function CustomersTable({
                           <Image
                             src={customer.image_url}
                             className="rounded-full"
-                            alt={`${customer.name}'s profile picture`}
+                            alt={`I's profile picture`}
                             width={28}
                             height={28}
                           />
